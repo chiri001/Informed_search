@@ -80,5 +80,5 @@ class PancakeProblem:
         for i in range(1, len(state)):
             if state[i] > state[i - 1]:
                 out_of_order_pancakes += 1  # increment out of order pancakes
-        return out_of_order_pancakes  # returns out of order pancakes
+        return out_of_order_pancakes  # returns out of order pancakes in state
 

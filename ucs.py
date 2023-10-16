@@ -59,9 +59,18 @@ def ucs_search(problem):
     return "FAILURE" #no solution
 
 
-#testing
-initial_stack = input("Enter pancakes: ")
+#get input from terminal and run a A* ssearch algorithm to reach goal
+initial_stack = input("Enter the Pancake stack order by size i.e 8 4 2"
+                        "(size has to be a valid number): ")
 initial_stack = list(map(int, initial_stack.split()))
+
+# find solution to problem
 problem = PancakeProblem(initial_stack)
 solution = ucs_search(problem)
-print(f"Pancakes Successfully rearranged : {solution}")
+
+
+print(f"Pancakes Before rearrangement                    : {initial_stack}")
+if solution != "FAILURE":
+    print(f"Pancakes Successfully rearranged non-increasingly: {solution}")
+else:
+    print("No Possible rearrangement to attain goal found")

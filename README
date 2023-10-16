@@ -31,6 +31,7 @@ I have implemented everything correctly to the best of my knowledge
 1. The pancakes will always be flipped such that smallest is on top and largest
     is at the bottom.
 2. Numbers provided are equivalent to sizes of the pancake
+3. Assumes that user will always give valid numbers
 
 *****************************************************************************
                         Architecture
