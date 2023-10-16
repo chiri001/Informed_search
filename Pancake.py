@@ -46,7 +46,8 @@ class PancakeProblem:
         # splits pancakes and reverse to get new order after flip at posn
         #add new order to remaining part after split
         flipped_pancake = state[:posn+1][::-1] 
-        new_state =  flipped_pancake + state[posn+1:] 
+        unflipped_pancake = state[posn+1:]
+        new_state =  flipped_pancake +  unflipped_pancake
         return tuple(new_state), 1  # returns flipped state and cost of action
     
     def path_cost(self, current_cost):

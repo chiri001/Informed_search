@@ -5,7 +5,7 @@
 from Pancake import PancakeProblem
 from priority_queue import Priority_queue
 
-def a_star_search(problem):
+def ucs_search(problem):
     """
     @purpose: performs a uniform search on the provided problem list
 
@@ -27,8 +27,8 @@ def a_star_search(problem):
     
     # loop, fails if the frontier is empty
     while not frontier.empty():
-
         curr = frontier.pop()
+
         visited.add(curr) #mark as visited
 
         #if curr contains the goal state then return curr
@@ -46,14 +46,14 @@ def a_star_search(problem):
             if new_state not in cost_so_far and new_state not in visited:
                 #insert child in frontier
                 cost_so_far[new_state] = new_cost
-                item_cost = new_cost + problem.heuristic(new_state)
+                item_cost = new_cost
                 frontier.push(new_state, item_cost) 
 
             #if child is in frontier with higher cost
             elif new_state in cost_so_far and new_cost < cost_so_far[new_state]:
                 #replace child in frontier with child
                 cost_so_far[new_state] = new_cost
-                item_cost = new_cost + problem.heuristic(new_state)
+                item_cost = new_cost
                 frontier.push(new_state, item_cost) 
      
     return "FAILURE" #no solution
@@ -63,5 +63,5 @@ def a_star_search(problem):
 initial_stack = input("Enter pancakes: ")
 initial_stack = list(map(int, initial_stack.split()))
 problem = PancakeProblem(initial_stack)
-solution = a_star_search(problem)
+solution = ucs_search(problem)
 print(f"Pancakes Successfully rearranged : {solution}")

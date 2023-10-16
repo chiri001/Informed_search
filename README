@@ -1,0 +1,57 @@
+******************************************************************************
+ * Name : Rennie Kipchirchir
+ * Pancake Problem
+ * File: README
+ * Date modified: 10/16/23
+*****************************************************************************
+                        Project Description
+*****************************************************************************
+
+A messy cook has a disordered stack of 10 differently sized pancakes 
+[size from 1 to 10] and a spatula that can be inserted at any point in the 
+stack and used to flip all pancakes above it. The goal is for the cook to have 
+them in the “correct” order for the customer, that is, the large on the bottom 
+up to the smallest on top ([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+
+*****************************************************************************
+                        Acknowledgements
+*****************************************************************************
+
+1. Youtube tutorials
+2. Lecture materials
+
+*****************************************************************************
+                        Correctly Implemented
+*****************************************************************************
+I have implemented everything correctly to the best of my knowledge
+
+*****************************************************************************
+                        Assumptions
+*****************************************************************************
+1. The pancakes will always be flipped such that smallest is on top and largest
+    is at the bottom.
+2. Numbers provided are equivalent to sizes of the pancake
+
+*****************************************************************************
+                        Architecture
+*****************************************************************************
+
+I have defined a pancake.py file that holds the definition of this particular
+search problem
+
+I have implemented two search algorithms that works for this problem state
+    a_star.py : A* search algorithm
+    ucs.py: Uniform cost search algorithm
+
+In my implementation, I have made use of heapq library to create a file with 
+functions that mimic a priority queue.
+
+**************************************************************************
+
+
+How to compile: 
+***************
+This method works on my macbook pro version macos ventura 
+    
+    1. run python3 a_star.py for A* algorithm
+    2. run python3 ucs.py for uniform cost search algorithm
